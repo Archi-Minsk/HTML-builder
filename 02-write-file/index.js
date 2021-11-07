@@ -23,7 +23,7 @@ const rline = readline.createInterface({
 });
 
 rline.on('line', (data) => {
-    if (data.trim() === 'exit') execExit();
+    if (data.trim() === 'exit') goodbye();
     fs.appendFile(filePath, `${data}${EOL}`, (err) => {
         if (err) throw err;
     });
